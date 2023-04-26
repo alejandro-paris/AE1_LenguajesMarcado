@@ -80,7 +80,6 @@ body {
         ul.nav-desplegable {
             list-style: none;
             display: inline-block;
-            min-width: 250px;
             position: relative;
         }
         
