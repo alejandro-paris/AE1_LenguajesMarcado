@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quiénes somos</title>
+        <title>Formulario de contacto</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -29,6 +29,147 @@
                 <p class="subtitulo"> Plantas de calidad para tu hogar y tus eventos. Servicio de decoración personalizado y profesional con plantas de nuestro cultivo. Visita nuestro vivero y <span class="resaltado-texto">enamórate de la naturaleza.</span></p>
 
             </div>
+            <h2>Alta de usuario</h2>
+            <!--utilizamos el method "post" para que los datos enviados sean privados y no se vean en la URL de la pagina web-->
+            <form action="procesarPeticion.jsp" method="post">
+                <fieldset>
+                    <legend>Datos de contacto:</legend>
+
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" name="nombre">
+                   
+                    <label for="apellidos">Apellidos:</label>
+                    <input id="apellidos" type="text" name="apellidos">
+                    <br/>
+
+                    <label for="nacimiento">Fecha de nacimiento:</label>
+                    <input id="nacimiento" type="date" name="nacimiento">
+                    <br/>
+
+                    <label for="identificacion">Tipo de documento:</label>
+                    <br/>
+                    <input type="radio" name="identificacion" value="NIF" />NIF
+                    <input type="radio" name="identificacion" value="NIE" />NIE
+                    <input type="radio" name="identificacion" value="PASSPORT" />Pasaporte
+                    
+
+                    <label for="num_identificacion"></label>
+                    <input id="num_identificacion" type="test" name="num_identificacion">
+                    <br/>
+
+                    <label for="direccion">Dirección:</label><br/>
+                    <textarea id="direccion"  style="resize: none;" rows="3" cols="80" name="direccion"   placeholder="Introduce tu domicilio"></textarea>
+                    <br/>
+
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email">
+                    <br/>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input id="telefono" type="tel" name="telefono">
+                    <br/>
+                    <br/>
+                    <input type="checkbox" name="terminos" value="Y" />
+                    <label for="terminos">He leido y acepto los terminos de uso  </label>
+                    
+                    <br/>	
+                    <br/>	
+                    <input type="submit" value="Enviar datos" />
+                    <input type="reset" value="Limpiar formulario" />
+
+                </fieldset>
+                <br/>
+            </form>
+
+            <h2>Formulario de contacto</h2>
+            <form action="procesarPeticion.jsp" method="post">
+                <fieldset>
+                    <legend>Datos de contacto:</legend>
+
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" name="nombre" placeholder="Introduce tu nombre">
+                    <br/>
+
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" placeholder="Introduce tu email">
+                    <br/>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input id="telefono" type="tel" name="telefono" placeholder="Introduce tu telefono">
+                    <br/>
+
+                    <label for="tipo_consulta">Tipo de consulta:</label><br/>
+                    <select name="tipo_consulta">
+                        <option value="I">Información</option>
+                        <option value="TUE">Presupuesto</option>
+
+                    </select>
+                    <br/>
+
+                    <label for="consulta">Consulta:</label><br/>
+                    <textarea id="consulta" style="resize: none" rows="6" cols="80" name="consulta" placeholder="Consultar"></textarea>
+                    <br/>
+                    <br/>
+                    <input type="checkbox" name="terminos" value="Y" />
+                    <label for="terminos">He leido y acepto los terminos de uso  </label>
+                    
+                    <br/>	
+                    <br/>	
+                    <input type="submit" value="Enviar consulta" />
+
+                </fieldset>
+                <br/>
+            </form>
+
+            <h2>Formulario de facturación</h2>
+            <form action="procesarPeticion.jsp" method="post">
+                <fieldset>
+                    <legend>Datos de facturación:</legend>
+
+                    <label for="facturacion">Usar datos de contacto </label>
+                    <input type="checkbox" name="terminos" value="Y" />
+                    <br/>
+                    <br/>
+                    
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" name="nombre">
+                   
+                    <label for="apellidos">Apellidos:</label>
+                    <input id="apellidos" type="text" name="apellidos">
+                    <br/>
+
+                    <label for="nacimiento">Fecha de nacimiento:</label>
+                    <input id="nacimiento" type="date" name="nacimiento">
+                    <br/>
+
+                    <label for="identificacion">Tipo de documento:</label>
+                    <br/>
+                    <input type="radio" name="identificacion" value="NIF" />NIF
+                    <input type="radio" name="identificacion" value="NIE" />NIE
+                    <input type="radio" name="identificacion" value="PASSPORT" />Pasaporte
+                    
+
+                    <label for="num_identificacion"></label>
+                    <input id="num_identificacion" type="test" name="num_identificacion">
+                    <br/>
+
+                    <label for="direccion">Dirección:</label><br/>
+                    <textarea id="direccion"  style="resize: none;" rows="3" cols="80" name="direccion"   placeholder="Introduce dirección"></textarea>
+                    <br/>
+
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email">
+                    <br/>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input id="telefono" type="tel" name="telefono">
+                    <br/>
+                    <br/>	
+                    <input type="submit" value="Enviar datos" />
+                    <input type="reset" value="Limpiar formulario" />
+
+                </fieldset>
+            </form>
 
         </main>
 
