@@ -25,13 +25,19 @@ body {
 /*---------------------------*/
 /*--- BARRA SUPERIOR que contiene HEADER y NAVBAR ---*/
 /*---------------------------*/
-#barra-superior {
+#contenedor-barra-cabecera {
     position: fixed;
-    width: 100%;
+    width: 100%; 
     background-color: #fafafa;
-    padding: 20px 4vw;
     box-shadow: 0 4px 5px #0000005b; 
     height: 100px;
+}
+
+#barra-cabecera {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px 4vw;
 }
     /*-- Header --*/
         #contenedor-logo-home {
@@ -53,8 +59,8 @@ body {
          #enlace-home:focus {
             background-color: #52454529; ;
         }
-        #enlace-home:hover {
-            outline: 2px solid; ;
+        #enlace-home:focus {
+            outline: 2px solid #524545;
         }
         #logo-home {
             width: 100px;
@@ -75,7 +81,7 @@ body {
         nav {
             text-align: right;
             width: 100%;
-            margin-top: 10px;
+            margin-top: 6px;
         }
         ul.nav-desplegable {
             list-style: none;
@@ -104,14 +110,14 @@ body {
         ul.lista-nav {
             visibility: hidden;
             position: absolute;
-            top: 65px;
+            top: 74px;
             right: 0;
             list-style: none;
             background-color: #fafafa;
             width: 100%;
             transition: opacity 0.3s ease-in-out;
             opacity: 0;
-            max-width: 250px;
+            width: 250px;
             text-align: right;
             border: 2px solid #524545;
             border-top: 0;
