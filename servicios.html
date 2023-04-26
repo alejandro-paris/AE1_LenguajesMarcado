@@ -4,43 +4,63 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quiénes somos</title>
-        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <!-- Aquí ira la cabecera y la barra de navegacion
              Es un copiar y pegar lo de la Home
         -->
         <header>
-
+            <div id="contenedor-barra-cabecera">
+                <div id="barra-cabecera">   
+                    <div id="contenedor-logo-home">
+                        <a id="enlace-home" href="home.html"></a>
+                        <img id="logo-home" src="img/Logo_Green_Heaven-sinletra.png" alt="">
+                        <h1 id="nombre-web">Green Heaven</h1>
+                    </div>
+                    <nav>
+                        <ul class="nav-desplegable">
+                            <li> <a href="#">Menú</a>
+                                <ul class="lista-nav">
+                                    <li><a class="enlace-navbar" href="quienessomos.html"> Quiénes somos</a></li>
+                                    <li><a class="enlace-navbar actual" href="#"> Servicios</a></li>
+                                    <li><a class="enlace-navbar" href="#"> Noticias</a></li>
+                                    <li><a class="enlace-navbar" href="#"> Publicaciones</a></li>
+                                    <li><a class="enlace-navbar" href="#"> Localizacion</a></li>
+                                    <li><a class="enlace-navbar" href="formulariocontacto.html"> Contacto</a></li>
+                            </li> 
+                                </ul>
+                        </ul>
+                    </nav>
+                
+                </div> 
+            </div>
         </header>
-
-        <nav>
-            
-        </nav>
+        <div id="div-vacio-header"></div>
         <!-- Fin cabecera y barra navegacion-->
 
         <main>
             <div class="header-img">
-                <img src="img/imagen_header_home_greenheaven.jpg" alt="Plantas decorativas de color verde" id="img-header-home">
+                <img src="img/imagen_header_servicios_greenheaven.jpg" alt="Plantas decorativas de color verde" id="img-header-home">
             </div>
 
             <div class="contenedor-ppal">
-                <h1 class="titulo-1">Bienvenido a Green Heaven</h1>
+                <h2 class="titulo-1">Bienvenido a Green Heaven</h2>
                 <p class="subtitulo"> Plantas de calidad para tu hogar y tus eventos. Servicio de decoración personalizado y profesional con plantas de nuestro cultivo. Visita nuestro vivero y <span class="resaltado-texto">enamórate de la naturaleza.</span></p>
 
             </div>
 
             <section>
-                <h2>¿Qué servicios préstamos en nuestra Empresa de Jardinería?</h2>
+                <h3>¿Qué servicios préstamos en nuestra Empresa de Jardinería?</h3>
                 <article id="articulo1">
-                    <h3>Desbroces de maleza</h3>
+                    <h4>Desbroces de maleza</h4>
                     <p>El desbroce consiste en eliminar el pasto, la mala hierba y la maleza que crecen en 
                         tu jardín. Nos encargamos de remover la tierra para eliminar toda esa masa vegetal 
                         que se encuentra en el suelo, considerando a los arbustos, árboles y plantas 
                         ornamentales que tengan un beneficio o valor para ti o que estén protegidos.</p>
                 </article>
                 <article>
-                    <h3>Poda de altura</h3>
+                    <h4>Poda de altura</h4>
                     <p>¿Tus árboles están muy altos y temes que puedan causar algún daño, 
                         si sus ramas se desprenden? La poda de altura consiste en cortar las ramas 
                         y troncos de árboles de gran altura, que pueden estorbar o sobrar, 
@@ -51,26 +71,68 @@
                         requiere.</p>
                 </article>
                 <article>
-                    <h3>Poda de árboles</h3>
+                    <h4>Poda de árboles</h4>
                     <p>Eliminamos las ramas de tus árboles para dirigir su crecimiento y darle más vialidad a su 
                         estructura. Además, evita que sus ramas se desarrollen densas que impidan que la luz pueda 
                         llegar en partes iguales a todas sus partes. Esto podría provocar un crecimiento desigual del 
                         árbol. Asimismo, podar tus árboles, contribuye con estimular la fructificación y la floración.</p>
                 </article>
                 <article>
-                    <h3>Poda de setos</h3>
+                    <h4>Poda de setos</h4>
                     <p>La poda juega un papel fundamental en los arbustos y los setos. ¿Sabías que a diferencia de otras plantas, 
                     la poda de setos no se debe efectuar únicamente en los primeros años de vida? Para que luzcan 
                     hermosos es fundamental podarlos a lo largo de su vida, de esta manera podrás dale forma y 
                     controlar su tamaño, la poda es esencial para el cuidado de tus setos.</p>
                 </article>
             </section>
-
+            
         </main>
-
+    
         <footer>
-        <!-- Aquí irá el mismo Footer que en la Home. Copiar y pegar-->
-        </footer>
+            <div class="footer-three-col">
+                <div class="contenedor-footer footer-col-1">
+                    <div class="tit-cont-footer"> Horario y apertura</div>
+                    <div class="content-cont-footer">
+                        <table class="tabla-centrada">
+                            <tr>
+                                <td><b>Lunes - Viernes</td></td>
+                                <td>9:00 - 20:00</td>
+                            </tr>
+                            <tr>
+                                <td><b>Fin de semana</b></td>
+                                <td>9:00 - 20:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+    
+                <div class="contenedor-footer footer-col-2">
+                    <div class="tit-cont-footer"> Ubicación</div>
+                    <div class="content-cont-footer">
+                        <div class="fila-col-footer">
+                            <img class="icono-ubicacion" src="img/green_heaven_iconolocalizacion.svg" alt="">
+                            <p class="p-con-icono ubicacion">Calle Las Rosas, 3, Madrid</p>
+                        </div>
+                </div>
+                </div>
+    
+                <div class="contenedor-footer footer-col-3">
+                    <div class="tit-cont-footer">Contacto</div>
+                    <div class="contenedor-footer">
+                        <div class="fila-col-footer">
+                            <img id="icono-mail" src="img/icono_contacto.svg" alt="">
+                            <p class="p-con-icono mail">hola@greenheaven.com</p>
+                        </div>
+    
+                        <div class="fila-col-footer">
+                            <img class="icono-telefono" src="img/icono_telefono.svg" alt="">
+                            <p class="p-con-icono tel">+34 111 111 111</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            </footer>
 
     </body>
 </html>
