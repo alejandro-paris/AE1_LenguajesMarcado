@@ -395,7 +395,7 @@ footer {
 }
 
 .caja-form {
-    font-size: 20px;
+    font-size: 18px;
     word-spacing: 8px;
     line-height: 30px;
     box-shadow: 0 0 10px 5px #00000026;
@@ -406,6 +406,15 @@ footer {
     padding-left: 3%;
     padding-top: 2%;
     padding-bottom: 2%;
+    padding-right: 3%;
 
+}
+
+.text_size{
+   font-size: 15px;
+}
+
+.drcha{
+    text-align:right;
 }
 
