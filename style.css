@@ -6,7 +6,10 @@ font-family: 'Jost', sans-serif;
 font-family: 'Playfair Display', serif;
 */
 
-/*Estilos generales*/
+/*---------------------------*/
+/*     Estilos generales       */
+/*---------------------------*/
+
 * {
     padding: 0px;
     margin: 0px;
@@ -194,7 +197,7 @@ body {
     object-position: center 40%;
 }
 
-/*--- CONTENEDORES ---*/
+/*--- CONTENEDORES GENERALES ---*/
 
 /*Estilo al contenedor ppal*/
 .contenedor-ppal {
@@ -203,10 +206,9 @@ body {
     padding: 20px 4vw;
 }
 
-/*División en columnas
-  - No partimos las columnas por medidas 75 -25 porque, al aplicar margin, 
-    nunca llegan a poder cumplir esas medidas.
-*/
+/*---- ESTILOS ESPECÍFICOS HOME ---*/
+
+/*División en columnas en la home */
 .dos-columnas {
     display: flex;
     flex-wrap: wrap;
@@ -226,7 +228,7 @@ body {
     flex-grow: 0;
 }
 
-/*Contenedor novedades*/
+/*Contenedor novedades home*/
 .caja-novedades {
     display: flex;
     align-items: center;
@@ -267,6 +269,8 @@ body {
     object-fit: cover;
     object-position: center;
 }
+
+/*---- FIN ESTILOS ESPECIFICIOS HOME ---*/
 
 /*--- ESTILOS PÁGINA SERVICIOS ---*/
 
@@ -351,7 +355,7 @@ body {
     }
 
     /*Seccion Conoce nuestro equipo*/
-    .contenedor-nuestra-historia{
+    .contenedor-nuestro-equipo{
         display: flex;
         margin: 0;
         overflow: hidden;
@@ -443,7 +447,6 @@ body {
 
 
 
-/*--- FIN CONTENEDORES ---*/
 
 /* ------ Titulos ------*/
 .titulo-1 {
@@ -610,10 +613,14 @@ footer {
     }
     .contenedor-vertical {
         width: 100%;
+        margin: 20px 0;
     }
     .titulos-servicios-columnas {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .servicios {
+        padding-top: 60px;
     }
 
     /*-- Pasamos al 100% la triple columna del footer --*/
@@ -732,7 +739,7 @@ footer {
     }
 
     /*-- Cambiamos disposicion img en pag quienes somos --*/
-    .contenedor-nuestra-historia{
+    .contenedor-nuestro-equipo{
         display: block;
     }
 
@@ -743,11 +750,13 @@ footer {
     }
     .contenedor-vertical {
         width: 100%;
+        margin: 20px 0;
     }
     .titulos-servicios-columnas {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
 
     /*-- Ajustes fomulario --*/
     .apellidos-formulario,
@@ -829,6 +838,23 @@ footer {
     /*-- Ocultamos publicidad --*/
     aside {
         display: none;
+    }
+
+    /*-- Cambiamos disposicion columnas en pag SERVICIOS --*/
+    .tres-columnas-servicios {
+        flex-wrap: wrap;
+    }
+    .contenedor-vertical {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .titulos-servicios-columnas {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .servicios {
+        padding-top: 60px;
     }
 
     /*-- Ajustes fomulario --*/
