@@ -293,20 +293,6 @@ body {
     padding-top: 0%;
   }
   
-  .contenedor-vertical button {
-    background-color: #ffffff; 
-    color: rgb(158, 167, 39);
-    padding: 8px 16px;
-    border: 1px solid rgb(158,167,39); 
-    border-radius: 4px; 
-    cursor: pointer;
-    font-size: inherit;
-  }
-  
-  .contenedor-vertical button:hover {
-    background-color: #d3d798;
-  }
-  
   /*Estilos imagenes*/
   
   .img-servicios {
@@ -392,6 +378,63 @@ body {
 
 /*--- FIN ESTILOS PAGINA SERVICIOS ---*/
 
+/*--- ESTILOS FORMULARIO DE CONTACTO ---*/
+.titulo-4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 33px;
+    color: #524545;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+.caja-form {
+    font-size: inherit;
+    word-spacing: 8px;
+    box-shadow: 0 0 10px 5px #00000026;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f4f4f2ea;
+    width: 100%;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 3%;
+}
+.campo-formulario {
+    display: block;
+    margin: 15px 0;
+}
+.nombre-formulario {
+    display: inline-block;
+}
+.apellidos-formulario {
+    float: right;
+}
+#direccion,
+ #consulta {
+    width: 100%;
+}
+#consulta {
+    min-height: 80px;
+    resize: vertical;
+}
+.text_size{
+   font-size: inherit;
+}
+.drcha {
+    float: right;
+}
+.clear  {
+    clear: both;
+}
+.caja-form input,
+ .caja-form textarea {
+    padding: 5px 10px;
+}
+
+
+/*--- FIN ESTILOS FORMULARIO DE CONTACTO ---*/
+
+
 
 /*--- FIN CONTENEDORES ---*/
 
@@ -453,6 +496,22 @@ a.ampliar-novedad:hover {
 }
 a.ampliar-novedad:focus {
     outline: 2px solid;
+}
+
+/*-- Botones --*/
+.contenedor-vertical button,
+.boton-form {
+ background-color: #ffffff; 
+ color: rgb(158, 167, 39);
+ padding: 8px 16px;
+ border: 1px solid rgb(158,167,39); 
+ border-radius: 4px; 
+ cursor: pointer;
+ font-size: inherit;
+}
+.contenedor-vertical button:hover,
+ .boton-form:hover {
+    background-color: #d3d798;
 }
 
 /*-- TABLAS --*/
@@ -693,6 +752,12 @@ footer {
         margin-bottom: 20px;
     }
 
+    /*-- Ajustes fomulario --*/
+    .apellidos-formulario,
+     .drcha {
+        float: none;
+    }
+
 
     /*-- Pasamos al 100% la triple columna del footer --*/
 
@@ -767,5 +832,11 @@ footer {
     /*-- Ocultamos publicidad --*/
     aside {
         display: none;
+    }
+
+    /*-- Ajustes fomulario --*/
+    .apellidos-formulario,
+    .drcha {
+        float: none;
     }
 }

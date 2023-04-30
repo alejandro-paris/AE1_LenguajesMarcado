@@ -3,15 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulario de contacto</title>
-        <link rel="stylesheet" href="estilosMaria.css">
+        <title>Green Heaven - Contacto</title>
+        <link rel="icon" type="image/x-icon" href="img/logo_green_home_favicon.png">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
             <header>
                 <div id="contenedor-barra-cabecera">
                     <div id="barra-cabecera">   
                         <div id="contenedor-logo-home">
-                            <a id="enlace-home" href="home.html"></a>
+                            <a id="enlace-home" href="index.html"></a>
                             <img id="logo-home" src="img/Logo_Green_Heaven-sinletra.png" alt="">
                             <h1 id="nombre-web">Green Heaven</h1>
                         </div>
@@ -49,65 +50,78 @@
                     <h3 class="titulo-4">Datos de contacto</h3>
                     <fieldset class="caja-form">
                         
+                        <div class="campo-formulario nombre-formulario">
+                            <label for="nombre">Nombre:</label>
+                            <input id="nombre" type="text" name="nombre" class="text_size" required>*
+                        </div>
 
-                        <label for="nombre">Nombre:</label>
-                        <input id="nombre" type="text" name="nombre" class="text_size" required>*
-                    
-                        <label for="apellidos">Apellidos:</label>
-                        <input id="apellidos" type="text" name="apellidos" class="text_size">
-                        <br/>
+                        <div class="campo-formulario apellidos-formulario">
+                            <label for="apellidos">Apellidos:</label>
+                            <input id="apellidos" type="text" name="apellidos" class="text_size">
+                        </div>
 
-                        <label for="nacimiento">Fecha de nacimiento:</label>
-                        <input id="nacimiento" type="date" name="nacimiento" class="text_size">
-                        <br/>
+                        <div class="campo-formulario clear ">
+                            <label for="nacimiento">Fecha de nacimiento:</label>
+                            <input id="nacimiento" type="date" name="nacimiento" class="text_size">
+                        </div>
 
-                        <label for="identificacion">Tipo de documento:</label>
-                        <br/>
-                        <input type="radio" name="identificacion" value="NIF"/>NIF
-                        <input type="radio" name="identificacion" value="NIE"/>NIE
-                        <input type="radio" name="identificacion" value="PASSPORT"/>Pasaporte
-                        
+                        <div class="campo-formulario ">
+                            <label for="identificacion">Tipo de documento:</label>
+                            <input type="radio" name="identificacion" value="NIF"/>NIF
+                            <input type="radio" name="identificacion" value="NIE"/>NIE
+                            <input type="radio" name="identificacion" value="PASSPORT"/>Pasaporte
+                        </div>
 
-                        <label for="num_identificacion"></label>
-                        <input id="num_identificacion" type="test" name="num_identificacion" class="text_size">
-                        <br/>
+                        <div class="campo-formulario ">
+                            <label for="num_identificacion"></label>
+                            <input id="num_identificacion" type="test" name="num_identificacion" class="text_size">
+                        </div>
 
-                        <label for="direccion">Dirección:</label><br/>
-                        <textarea id="direccion"  style="resize: none;" rows="3" cols="80" name="direccion"   placeholder="Introduce tu domicilio" class="text_size"></textarea>
-                        <br/>
+                        <div class="campo-formulario ">
+                            <label for="direccion">Dirección:</label><br/>
+                            <textarea id="direccion"  style="resize: none;" name="direccion"   placeholder="Introduce tu domicilio" class="text_size"></textarea>
+                        </div>
 
-                        <label for="email">Email:</label>
-                        <input id="email" type="email" name="email" class="text_size" required>*
-                        <br/>
+                        <div class="campo-formulario ">
+                            <label for="email">Email:</label>
+                            <input id="email" type="email" name="email" class="text_size" required>*
+                        </div>
 
-                        <label for="telefono">Teléfono:</label>
-                        <input id="telefono" type="tel" name="telefono" class="text_size"><br/>
-                        <br/>
+                        <div class="campo-formulario ">
+                            <label for="telefono">Teléfono:</label>
+                            <input id="telefono" type="tel" name="telefono" class="text_size"><br/>
+                        </div>
 
-                        <label for="tipo_consulta">Tipo de consulta:</label><br/>
-                        <select name="tipo_consulta" class="text_size">
-                            <option value="I">Información</option>
-                            <option value="TUE">Presupuesto</option>
-                        </select>
-                        <br/>
+                        <div class="campo-formulario ">
+                            <label for="tipo_consulta">Tipo de consulta:</label><br/>
+                            <select name="tipo_consulta" class="text_size">
+                                <option value="I">Información</option>
+                                <option value="TUE">Presupuesto</option>
+                            </select>
+                        </div>
 
-                        <label for="consulta">Consulta:</label><br/>
-                        <textarea id="consulta" style="resize: none" rows="6" cols="80" name="consulta" placeholder="Consultar" class="text_size"></textarea>
-                        <br/>
+                        <div class="campo-formulario ">
+                            <label for="consulta">Consulta:</label><br/>
+                            <textarea id="consulta" name="consulta" placeholder="Consultar" class="text_size"></textarea>
+                        </div>
 
-                        <label for="color">Indique la gama cromática preferente para realizar su consulta de forma personalizada:</label>
-                        <input id="color" type="color" name="color"><br/>
+                        <div class="campo-formulario ">
+                            <label for="color">Indique la gama cromática preferente para realizar su consulta de forma personalizada:</label>
+                            <input id="color" type="color" name="color">
+                        </div>
 
-                        <br/>
-                        <br/>
-                        <input type="checkbox" name="terminos" value="Y" />
-                        <label for="terminos">He leído y acepto los términos de uso  </label><br/>
+                        <div class="campo-formulario ">
+                            <input type="checkbox" name="terminos" value="Y" />
+                            <label for="terminos">He leído y acepto los términos de uso  </label><br/>
+                        </div>
+
+
                         <p class="drcha">Los campos con * son obligatorios</p>
-                        
-                        <br/>	
-                        <br/>	
-                        <input type="submit" value="Enviar datos" class="text_size"/>
-                        <input type="reset" value="Limpiar formulario" class="float" />
+
+                        <div class="campo-formulario clear ">
+                            <input type="submit" value="Enviar datos" class="text_size boton-form"/>
+                            <input type="reset" value="Limpiar formulario" class="boton-form" />
+                        </div>
 
                     </fieldset>
                     <br/>
