@@ -20,6 +20,7 @@ div {
 body {
     font-family: 'Jost', sans-serif;
     color: #0A0A0A;
+    font-size: 18px;
 }
 
 /*---------------------------*/
@@ -130,31 +131,29 @@ body {
             opacity: 1;
         }
 
-        ul.lista-nav li{
-            margin: 5px 10px;
-            padding: 5px 15px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
         ul.lista-nav li a{
+            display: block;
             font-family: 'Playfair Display', serif;
             color: #458021;
             text-decoration: none;
             font-size: 20px;
+            margin: 5px 10px;
+            padding: 5px 15px;
+            border-radius: 10px;
+            cursor: pointer;
         }   
         ul.lista-nav li a:focus{
             outline: none;
         }
 
 
-        ul.lista-nav li:hover,
-        ul.lista-nav li:focus-within{
+        ul.lista-nav li a:hover,
+        ul.lista-nav li a:focus {
            color: #458021;
            background-color: #45802129;
        }
 
-       ul.lista-nav li:focus-within{
+       ul.lista-nav li a:focus{
           outline: 2px solid;
       }
 
@@ -232,8 +231,8 @@ body {
 .img-novedad {
     flex-grow: 1;
     flex-shrink: 0;
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
 }
 .img-novedad img {
     width: 100%;
@@ -278,13 +277,16 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 35px;
     color: #524545;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    border-top: 1px dashed;
+    border-bottom: 1px dashed;
+    text-align: center;
 }
 
 .titulo-3 {
-    font-size: 18px;
+    font-size: 22px;
     color: #9FA827;
     margin-bottom: 5px;
 }
@@ -294,7 +296,7 @@ body {
 
 /*---- Estilo parafos ---*/
 .subtitulo {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 50px;
 }
 
@@ -310,8 +312,10 @@ body {
 /*-- Enlaces --*/
 a.ampliar-novedad {
     color: #458021;
-    padding: 2px 5px;
+    padding: 2px 0;
     border-radius: 5px;
+    display: inline-block;
+    margin: 5px 0;
 }
 a.ampliar-novedad:hover {
     background-color: #45802129;
@@ -346,13 +350,16 @@ footer {
 }
 
 .footer-col-1, .footer-col-2, .footer-col-3 {
-    flex-basis: auto;
+    flex-basis: 0;
 }
 .footer-col-1 {
     flex-grow: 3;
 }
 .footer-col-2 {
     flex-grow: 2;
+}
+.footer-col-3 {
+    flex-grow: 0;
 }
 
 .contenedor-footer {
@@ -383,4 +390,220 @@ footer {
 }
 .fila-col-footer .p-con-icono{
     margin-left: 15px;
+}
+
+
+/*---- Media Queries ---*/
+
+/*-- 
+    Para TABLETS VERTICAL. Establecemos 870px por la medida a partir de la
+     que más sufría el diseño. 
+--*/
+@media screen and (max-width: 870px) and (orientation:portrait) {
+
+    /*-- Imagenes de novedades Home a 100% --*/
+    .caja-novedades {
+        flex-wrap: wrap;
+    }
+
+    /*-- Pasamos al 100% la triple columna del footer --*/
+
+    .footer-three-col {
+        display: block;
+    }
+
+    .contenedor-footer {
+        margin-bottom: 20px;
+    }
+
+}
+
+/*-- 
+    Para TABLETS HORIZONTAL. 
+--*/
+
+@media screen and (max-height: 870px) and (orientation:landscape) {
+    
+    /* Pequeños ajustes de tamaño de texto */
+    body {
+        font-size: 16px;
+    }
+    .titulo-1 {
+        font-size: 40px;
+    }
+    .subtitulo {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .titulo-2 {
+        font-size: 25px;
+    }
+    .titulo-3 {
+        font-size: 20px;
+    }
+    
+    
+    /* Reducción tamaño imagen header */
+    .header-img {
+        height: 150px;
+    }
+}
+
+
+
+/*-- 
+    Para móviles en vertical. Establecemos 580px por la medida a partir de la
+     que más sufría el diseño. 
+--*/
+@media screen and (max-width: 580px) and (orientation:portrait) {
+
+    /*-- Adaptamos tamaño de fuentes --*/
+    body {
+        font-size: 16px;
+    }
+    .titulo-1 {
+        font-size: 30px;
+    }
+    .subtitulo {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .titulo-2 {
+        font-size: 25px;
+    }
+    .titulo-3 {
+        font-size: 18px;
+    }
+    
+    /*-- Redimensión header --*/
+    #div-vacio-header {
+        height: 70px;
+    }
+    #contenedor-barra-cabecera {
+        height: 70px;
+    }
+    #logo-home {
+        width: 60px;
+    }
+    #contenedor-logo-home {
+        min-width: 0;
+    }
+    #nombre-web {
+        display: none;
+    }
+    nav {
+        margin-top: 0px;
+    }
+    ul.nav-desplegable > li > a {
+        font-size: 20px;
+    }
+    ul.lista-nav {
+        top: 50px;
+    }
+    ul.lista-nav li a {
+        font-size: 16px;
+    }
+
+    /*-- Reducimos el alto de la img de cabecera --*/
+    .header-img {
+        height: 100px;
+    }
+
+    /*-- 
+        Pasamos a ancho completo la doble columna de la home. 
+         El contenido de cada columna pasa a estar al 100%
+    --*/
+    .dos-columnas {
+        display: block;
+    }
+    .col-1, .col-2 {
+        margin: 0;
+    }
+    .caja-novedades {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*--
+        Ocultamos la parte aside.
+    --*/
+    aside {
+        display: none;
+    }
+
+
+    /*-- Pasamos al 100% la triple columna del footer --*/
+
+    .footer-three-col {
+        display: block;
+    }
+
+    .contenedor-footer {
+        margin-bottom: 20px;
+    }
+}
+
+/*-- 
+    Para móviles en horizontal. Establecemos 450px como altura máxima
+--*/
+@media screen and (max-height: 450px) and (orientation:landscape) {
+
+
+    /*-- Adaptamos tamaño de fuentes --*/
+    body {
+        font-size: 16px;
+    }
+    .titulo-1 {
+        font-size: 30px;
+    }
+    .subtitulo {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .titulo-2 {
+        font-size: 25px;
+    }
+    .titulo-3 {
+        font-size: 18px;
+    }
+
+    /*-- Redimensión header --*/
+    
+    #div-vacio-header {
+        height: 70px;
+    }
+    #contenedor-barra-cabecera {
+        height: 70px;
+    }
+    #logo-home {
+        width: 60px;
+    }
+    #nombre-web {
+        font-size: 25px;
+        margin-left: 70px;
+        margin-top: 0;
+    }
+    nav {
+        margin-top: 0px;
+    }
+    ul.nav-desplegable > li > a {
+        font-size: 20px;
+    }
+    ul.lista-nav {
+        top: 50px;
+    }
+    ul.lista-nav li a {
+        font-size: 16px;
+    }
+    
+
+    /*-- Ocultamos la imagen del header --*/
+    .header-img {
+        display: none;
+    }
+
+    /*-- Ocultamos publicidad --*/
+    aside {
+        display: none;
+    }
 }
