@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulario de contacto</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="estilosMaria.css">
     </head>
     <body>
             <header>
@@ -19,7 +19,7 @@
                             <ul class="nav-desplegable">
                                 <li> <a href="#">Menú</a>
                                     <ul class="lista-nav">
-                                        <li><a class="enlace-navbar" href="Quienes_somos.html"> Quiénes somos</a></li>
+                                        <li><a class="enlace-navbar" href="Quienes_Somos.html"> Quiénes somos</a></li>
                                         <li><a class="enlace-navbar" href="servicios.html"> Servicios</a></li>
                                         <li><a class="enlace-navbar" href="#"> Noticias</a></li>
                                         <li><a class="enlace-navbar" href="#"> Publicaciones</a></li>
@@ -41,70 +41,73 @@
             </div>
 
             <div class="contenedor-ppal">
-                <h2 class="titulo-1">Bienvenido a Green Heaven</h2>
-                <p class="subtitulo"> Plantas de calidad para tu hogar y tus eventos. Servicio de decoración personalizado y profesional con plantas de nuestro cultivo. Visita nuestro vivero y <span class="resaltado-texto">enamórate de la naturaleza.</span></p>
+                <h2 class="titulo-1">Formulario de contacto</h2>
+                <p class="subtitulo"> Realiza todas las consultas que necesites de una forma <span class="resaltado-texto">personalizada</span>.</p>
 
-            
-                <h3>Alta de usuario</h3>
                 <!--utilizamos el method "post" para que los datos enviados sean privados y no se vean en la URL de la pagina web-->
                 <form action="procesarPeticion.jsp" method="post">
-                    <fieldset>
-                        <legend>Datos de contacto:</legend>
+                    <h3 class="titulo-4">Datos de contacto</h3>
+                    <fieldset class="caja-form">
+                        
 
                         <label for="nombre">Nombre:</label>
-                        <input id="nombre" type="text" name="nombre">
+                        <input id="nombre" type="text" name="nombre" class="text_size" required>*
                     
                         <label for="apellidos">Apellidos:</label>
-                        <input id="apellidos" type="text" name="apellidos">
+                        <input id="apellidos" type="text" name="apellidos" class="text_size">
                         <br/>
 
                         <label for="nacimiento">Fecha de nacimiento:</label>
-                        <input id="nacimiento" type="date" name="nacimiento">
+                        <input id="nacimiento" type="date" name="nacimiento" class="text_size">
                         <br/>
 
                         <label for="identificacion">Tipo de documento:</label>
                         <br/>
-                        <input type="radio" name="identificacion" value="NIF" />NIF
-                        <input type="radio" name="identificacion" value="NIE" />NIE
-                        <input type="radio" name="identificacion" value="PASSPORT" />Pasaporte
+                        <input type="radio" name="identificacion" value="NIF"/>NIF
+                        <input type="radio" name="identificacion" value="NIE"/>NIE
+                        <input type="radio" name="identificacion" value="PASSPORT"/>Pasaporte
                         
 
                         <label for="num_identificacion"></label>
-                        <input id="num_identificacion" type="test" name="num_identificacion">
+                        <input id="num_identificacion" type="test" name="num_identificacion" class="text_size">
                         <br/>
 
                         <label for="direccion">Dirección:</label><br/>
-                        <textarea id="direccion"  style="resize: none;" rows="3" cols="80" name="direccion"   placeholder="Introduce tu domicilio"></textarea>
+                        <textarea id="direccion"  style="resize: none;" rows="3" cols="80" name="direccion"   placeholder="Introduce tu domicilio" class="text_size"></textarea>
                         <br/>
 
                         <label for="email">Email:</label>
-                        <input id="email" type="email" name="email">
+                        <input id="email" type="email" name="email" class="text_size" required>*
                         <br/>
 
                         <label for="telefono">Teléfono:</label>
-                        <input id="telefono" type="tel" name="telefono"><br/>
+                        <input id="telefono" type="tel" name="telefono" class="text_size"><br/>
                         <br/>
 
                         <label for="tipo_consulta">Tipo de consulta:</label><br/>
-                        <select name="tipo_consulta">
+                        <select name="tipo_consulta" class="text_size">
                             <option value="I">Información</option>
                             <option value="TUE">Presupuesto</option>
-
                         </select>
                         <br/>
 
                         <label for="consulta">Consulta:</label><br/>
-                        <textarea id="consulta" style="resize: none" rows="6" cols="80" name="consulta" placeholder="Consultar"></textarea>
+                        <textarea id="consulta" style="resize: none" rows="6" cols="80" name="consulta" placeholder="Consultar" class="text_size"></textarea>
+                        <br/>
+
+                        <label for="color">Indique la gama cromática preferente para realizar su consulta de forma personalizada:</label>
+                        <input id="color" type="color" name="color"><br/>
 
                         <br/>
                         <br/>
                         <input type="checkbox" name="terminos" value="Y" />
-                        <label for="terminos">He leido y acepto los terminos de uso  </label>
+                        <label for="terminos">He leído y acepto los términos de uso  </label><br/>
+                        <p class="drcha">Los campos con * son obligatorios</p>
                         
                         <br/>	
                         <br/>	
-                        <input type="submit" value="Enviar datos" />
-                        <input type="reset" value="Limpiar formulario" />
+                        <input type="submit" value="Enviar datos" class="text_size"/>
+                        <input type="reset" value="Limpiar formulario" class="float" />
 
                     </fieldset>
                     <br/>
