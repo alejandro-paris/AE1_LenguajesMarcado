@@ -41,121 +41,128 @@ body {
     padding: 20px 4vw;
 }
     /*-- Header --*/
-        #contenedor-logo-home {
-            position: relative;
-            float: left;
-            width: 25%;
-            min-width: 350px;
-        }
+    #contenedor-logo-home {
+        position: relative;
+        float: left;
+        width: 25%;
+        min-width: 350px;
+    }
 
-        #enlace-home {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            border-radius: 7px;
-        }
-        #enlace-home:hover,
-         #enlace-home:focus {
-            background-color: #52454529; ;
-        }
+    #enlace-home {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 7px;
+    }
+    #enlace-home:hover,
         #enlace-home:focus {
-            outline: 2px solid #524545;
-        }
-        #logo-home {
-            width: 100px;
-            height: 100%;
-            float: left;
-        }
-        #nombre-web {
-            font-size: 30px;
-            margin-left: 120px;
-            margin-top: 6px;
-            font-family: 'Playfair Display', serif;
-            font-weight: normal;
-            color: #524545;
-        }
+        background-color: #52454529; ;
+    }
+    #enlace-home:focus {
+        outline: 2px solid #524545;
+    }
+    #logo-home {
+        width: 100px;
+        height: 100%;
+        float: left;
+    }
+    #nombre-web {
+        font-size: 30px;
+        margin-left: 120px;
+        margin-top: 6px;
+        font-family: 'Playfair Display', serif;
+        font-weight: normal;
+        color: #524545;
+    }
 
 
     /*-- Navbar --*/
-        nav {
-            text-align: right;
-            width: 100%;
-            margin-top: 6px;
-        }
-        ul.nav-desplegable {
-            list-style: none;
-            display: inline-block;
-            position: relative;
-        }
-        
-        ul.nav-desplegable > li > a{
-            color: #524545;
-            font-family: 'Playfair Display', serif;
-            font-size: 30px;
-            padding: 2px 15px;
-            border-radius: 7px;
-        }
+    nav {
+        text-align: right;
+        width: 100%;
+        margin-top: 6px;
+    }
+    ul.nav-desplegable {
+        list-style: none;
+        display: inline-block;
+        position: relative;
+    }
 
-        ul.nav-desplegable > li > a:hover,
-         ul.nav-desplegable > li > a:focus {
-            background-color: #52454529;
-        }
+    ul.nav-desplegable > li > a{
+        color: #524545;
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+        padding: 2px 15px;
+        border-radius: 7px;
+    }
 
+    ul.nav-desplegable > li > a:hover,
         ul.nav-desplegable > li > a:focus {
-            background-color: #52454529;
-            outline: 2px solid;
-        }
+        background-color: #52454529;
+    }
 
-        ul.lista-nav {
-            visibility: hidden;
-            position: absolute;
-            top: 74px;
-            right: 0;
-            list-style: none;
-            background-color: #fafafa;
-            width: 100%;
-            transition: opacity 0.3s ease-in-out;
-            opacity: 0;
-            width: 250px;
-            text-align: right;
-            border: 2px solid #524545;
-            border-top: 0;
-            border-radius: 0 0 7px 7px;
-        }
+    ul.nav-desplegable > li > a:focus {
+        background-color: #52454529;
+        outline: 2px solid;
+    }
 
-         ul.nav-desplegable li:focus-within .lista-nav,
-         ul.nav-desplegable li .lista-nav:hover {
-            visibility: visible;
-            opacity: 1;
-        }
+    ul.lista-nav {
+        visibility: hidden;
+        position: absolute;
+        top: 74px;
+        right: 0;
+        list-style: none;
+        background-color: #fafafa;
+        width: 100%;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+        width: 250px;
+        text-align: right;
+        border: 2px solid #524545;
+        border-top: 0;
+        border-radius: 0 0 7px 7px;
+    }
 
-        ul.lista-nav li a{
-            display: block;
-            font-family: 'Playfair Display', serif;
-            color: #458021;
-            text-decoration: none;
-            font-size: 20px;
-            margin: 5px 10px;
-            padding: 5px 15px;
-            border-radius: 10px;
-            cursor: pointer;
-        }   
-        ul.lista-nav li a:focus{
-            outline: none;
-        }
+        ul.nav-desplegable li:focus-within .lista-nav,
+        ul.nav-desplegable li .lista-nav:hover {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    ul.lista-nav li a{
+        display: block;
+        font-family: 'Playfair Display', serif;
+        color: #458021;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 5px 10px;
+        padding: 5px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+    }   
+    ul.lista-nav li a:focus{
+        outline: none;
+    }
 
 
-        ul.lista-nav li a:hover,
-        ul.lista-nav li a:focus {
-           color: #458021;
-           background-color: #45802129;
-       }
+    ul.lista-nav li a:hover:not(.actual),
+    ul.lista-nav li a:focus:not(.actual) {
+        color: #458021;
+        background-color: #45802129;
+    }
 
-       ul.lista-nav li a:focus{
-          outline: 2px solid;
-      }
+    ul.lista-nav li a:focus{
+        outline: 2px solid;
+    }
+
+    ul.lista-nav li a.actual {
+        color: #458021;
+        font-weight: bold;
+        border: 2px solid;
+        cursor: auto;
+    } 
 
 
 
@@ -628,23 +635,13 @@ footer {
 @media screen and (max-height: 870px) and (orientation:landscape) {
     
     /* Pequeños ajustes de tamaño de texto */
-    body {
-        font-size: 16px;
-    }
     .titulo-1 {
         font-size: 40px;
     }
-    .subtitulo {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
+
     .titulo-2 {
         font-size: 25px;
     }
-    .titulo-3 {
-        font-size: 20px;
-    }
-    
     
     /* Reducción tamaño imagen header */
     .header-img {
