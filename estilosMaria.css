@@ -418,3 +418,7 @@ footer {
     text-align:right;
 }
 
+.float{
+    float: right;
+    font-size: 15px;
+}
